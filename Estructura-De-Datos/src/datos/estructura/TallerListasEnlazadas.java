@@ -20,7 +20,7 @@ public class TallerListasEnlazadas {
 		 
 		 boolean salir = false;
 		 //Instanciar la lista
-		 Lista listaSimple = new Lista();
+		 Listaa listaSimple = new Listaa();
 		 
 		 do {
 			 System.out.println("1. Insertar datos ");

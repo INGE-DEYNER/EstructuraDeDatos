@@ -11,7 +11,7 @@ public class ListaEnlazadaSimple {
 		 int refe;
 		 boolean salir = false;
 		 //Instanciar la lista 
-		 Lista listaSimple = new Lista();
+		 Listaa listaSimple = new Listaa();
 		 
 		 do {
 			 System.out.println("1. Insertar por el comienzo");

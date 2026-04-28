@@ -1,14 +1,14 @@
 package datos.estructura;
 
 //Opercaion con los nodos y la lista
-public class Lista {
+public class Listaa {
 	
 	// Establecer el nodo cabeza
 	private Nodo CAB;
 
 	
 	
-	public Lista() {
+	public Listaa() {
 		CAB=null;
 	}
 	
