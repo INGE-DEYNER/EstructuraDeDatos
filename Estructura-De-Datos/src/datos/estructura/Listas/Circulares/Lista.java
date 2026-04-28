@@ -1,5 +1,4 @@
 package datos.estructura.Listas.Circulares;
-import datos.estructura.Listas.Circulares.Nodo;
 
 public class Lista {
     
@@ -19,7 +18,7 @@ public class Lista {
     public void insertStart(int dato){
         Nodo nuevo = new Nodo();
 
-        nuevo.info = dato;
+        nuevo.setInfo(dato);
         if(isEmpty()){
             
             CAB = nuevo;
@@ -39,7 +38,7 @@ public class Lista {
     public void insertEnd(int dato){
         Nodo nuevo = new Nodo();
 
-        nuevo.info = dato;
+        nuevo.setInfo(dato);
         if(isEmpty()){
             
             CAB = nuevo;
@@ -62,7 +61,7 @@ public class Lista {
             Nodo t=CAB;
             System.out.println("->");
             do { 
-                System.out.println(t.info + "->");
+                System.out.println(t.getInfo() + "->");
                 t=t.sig;
 
             } while (t!=CAB);

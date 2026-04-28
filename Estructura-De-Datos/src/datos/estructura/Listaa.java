@@ -1,6 +1,6 @@
 package datos.estructura;
 
-//Opercaion con los nodos y la lista
+//Operacion con los nodos y la lista
 public class Listaa {
 	
 	// Establecer el nodo cabeza
@@ -62,7 +62,7 @@ public class Listaa {
 	}//Metodo
 	
 	
-	//Metodo para mostrar la los elementos de la lista
+	//Metodo para mostrar los elementos de la lista
 	public void mostrarLista() {
 		Nodo t=CAB;
 		if(!esVacia()) {
@@ -91,7 +91,7 @@ public class Listaa {
 		}else {
 			System.out.println("Lista vacia, no se puede sumar!");
 		}
-		System.out.println("Suma del la nomina: "+sumaSalario);
+		System.out.println("Suma de la nomina: "+sumaSalario);
 		
 		
 	}
@@ -108,7 +108,7 @@ public class Listaa {
 		t = t.sig;
 		
 		
-		System.out.println("El salraio mayor es:  " + mayor);
+			System.out.println("El salario mayor es:  " + mayor);
 			}else {
 				menor = t.info;
 				t= t.sig;
@@ -117,7 +117,7 @@ public class Listaa {
 				}
 			}
 			}else {
-			System.out.println("Lista vacia , no hay elementos!");
+			System.out.println("Lista vacia, no hay elementos!");
 			}
 		}
 		
@@ -164,7 +164,7 @@ public class Listaa {
 		nuevo.info=dato;
 		
 		if(esVacia()) {
-			System.out.println("Lista  Vacia");
+			System.out.println("Lista Vacia");
 		}else {
 			if(CAB.info == refe) {
 				nuevo.sig = CAB;
@@ -182,7 +182,7 @@ public class Listaa {
 					anterior.sig=nuevo;
 					System.out.println("Se ha ingresado el dato");
 				}else {
-					System.out.println("Nodo de referencia non existe");
+					System.out.println("Nodo de referencia no existe");
 				}
 			}
 			

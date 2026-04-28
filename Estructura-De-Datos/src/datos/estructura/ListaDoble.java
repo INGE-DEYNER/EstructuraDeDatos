@@ -15,12 +15,12 @@ public class ListaDoble {
 	
 	//Metodo para determinar si la lista esta vacia 
 	public boolean esVacia() {
-		return CAB1==null;
+		return CAB1==null && CAB2==null;
 	}
 	
 	public void insertarComienzo(int dato) {
 		//Crear el nuevo nodo
-		NodoDoble nuevo = new Nodo();
+		NodoDoble nuevo = new NodoDoble();
 		//Almacenar el dato en el nodo
 		nuevo.info=dato;
 		//Enlazar los nodos 

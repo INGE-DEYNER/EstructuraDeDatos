@@ -14,7 +14,7 @@ public class MetodosDeOrdenacion {
 	private static void mostrarVector(int [] num) {
 		System.out.println("Elementos del vector:");
 		for (int i = 0; i<num.length; i++) {
-			System.out.println(num[i] + " ");;
+			System.out.println(num[i] + " ");
 			
 		}
 		System.out.println("\n");
@@ -43,10 +43,10 @@ public class MetodosDeOrdenacion {
 	
 	//Insercion
 	private static void insercion(int[] num) {
-		int aux = 0, indice;
+		int aux, indice;
 		for (int i = 1; i < num.length; i++) {
 			aux = num[i];
-			indice = i-1; // Posicion a comparar
+				indice = i-1; // Posicion a comparar
 			
 			while(indice >= 0 && num[indice]>aux) {
 				num[indice+1]= num[indice];
@@ -61,7 +61,7 @@ public class MetodosDeOrdenacion {
 	private static void seleccion(int[] num) {
 		int aux,min;
 		for(int i = 0; i < num.length; i++) {
-			min= i; // determinar el numero menor
+				min= i; // determinar el numero menor
 			for(int j =i+1; j<num.length; j++) {
 				if(num[min]>num[j]) {
 					min=j;
@@ -77,40 +77,28 @@ public class MetodosDeOrdenacion {
 	
 	
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		
-		int opc;
-		
-		boolean salir = false;
-		int[] numeros = {15,17,9,6,2,11,24,3 };
-		do {
-			System.out.println("1. Burbuja");
-			System.out.println("2. Insercion");
-			System.out.println("3. Seleccion");
-			System.out.println("4. Mostrar Vector");
-			System.out.println("Ingrese una opcion:");
-			opc = sc.nextInt();
-			switch(opc) {
-			 
-			case 1:
-				burbuja(numeros);
-				break;
-				
-			case 2:
-				insercion(numeros);
-				break;
-				
-			case 3:
-				seleccion(numeros);
-				break;
-			case 4:
-				mostrarVector(numeros);
-				break;
-				
-			default: System.out.println("Opcion invalida"); 
-			break;
+			try (Scanner sc = new Scanner(System.in)) {
+				int opc;
+				boolean salir = false;
+				int[] numeros = {15,17,9,6,2,11,24,3 };
+				do {
+					System.out.println("1. Burbuja");
+					System.out.println("2. Insercion");
+					System.out.println("3. Seleccion");
+					System.out.println("4. Mostrar Vector");
+					System.out.println("5. Salir");
+					System.out.println("Ingrese una opcion:");
+					opc = sc.nextInt();
+					switch(opc) {
+					case 1 -> burbuja(numeros);
+					case 2 -> insercion(numeros);
+					case 3 -> seleccion(numeros);
+					case 4 -> mostrarVector(numeros);
+					case 5 -> salir = true;
+					default -> System.out.println("Opcion invalida");
+					}
+				} while(!salir);
 			}
-		}while(!salir);
 		
 
 	}
